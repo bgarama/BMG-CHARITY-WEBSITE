@@ -194,3 +194,20 @@ footer p:first-child {
     grid-template-columns: 1fr;
   }
 }
+
+.logo img {
+  height: 42px;
+}
+
+.logo span {
+  font-size: 18px;
+}
+
+.site-header {
+  padding: 14px 6%;
+}
+
+.nav-menu a {
+  font-size: 18px;
+  margin: 6px 10px;
+}
