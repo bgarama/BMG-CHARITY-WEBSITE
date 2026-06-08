@@ -52,8 +52,8 @@ body {
 
 .hero {
   min-height: 85vh;
-  background: linear-gradient(rgba(6, 77, 47, 0.75), rgba(6, 77, 47, 0.75)),
-    url("assets/images/hero-cleanup.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 80, 40, 0.45)),
+  url("assets/images/hero-cleanup.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--white);
