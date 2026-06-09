@@ -798,3 +798,27 @@ footer p:first-child {
     width: 100%;
   }
 }
+
+.whatsapp-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.social-links a {
+  min-width: 130px;
+  text-align: center;
+}
+
+.map-intro {
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.contact-card p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
