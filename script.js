@@ -1,223 +1,50 @@
-:root {
-  --bmg-green: #00A651;
-  --bmg-dark-green: #064d2f;
-  --bmg-orange: #F4A024;
-  --white: #ffffff;
-  --light-bg: #f4f8f5;
-  --text-dark: #1f2933;
-}
+/* =========================
+   BAHA MADZO GADZE WEBSITE JS
+========================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-body {
-  font-family: Arial, sans-serif;
-  color: var(--text-dark);
-  background: var(--white);
-  line-height: 1.6;
-}
+  /* =========================
+     GALLERY LIGHTBOX
+  ========================= */
 
-.site-header {
-  background: var(--white);
-  padding: 18px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 3px solid var(--bmg-green);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  const galleryImages = document.querySelectorAll(
+    ".gallery-album-card img, .featured-gallery-grid img, .gallery-grid img"
+  );
 
-.logo {
-  font-weight: 800;
-  color: var(--bmg-green);
-  font-size: 18px;
-}
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
 
-.nav-menu a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-}
+  if (galleryImages.length > 0 && lightbox && lightboxImg && closeBtn) {
 
-.nav-menu a:hover {
-  color: var(--bmg-green);
-}
-
-.hero {
-  min-height: 85vh;
-  background: linear-gradient(rgba(6, 77, 47, 0.75), rgba(6, 77, 47, 0.75)),
-    url("assets/images/hero-cleanup.jpg");
-  background-size: cover;
-  background-position: center;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 8%;
-}
-
-.hero-content {
-  max-width: 900px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-
-.hero h2 {
-  font-size: 28px;
-  margin-bottom: 18px;
-  color: var(--bmg-orange);
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 700;
-  margin: 8px;
-}
-
-.primary {
-  background: var(--bmg-green);
-  color: var(--white);
-}
-
-.secondary {
-  border: 2px solid var(--white);
-  color: var(--white);
-}
-
-.intro,
-.programs {
-  padding: 70px 8%;
-  text-align: center;
-}
-
-.intro {
-  background: var(--light-bg);
-}
-
-.intro h2,
-.programs h2 {
-  color: var(--bmg-dark-green);
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
-.intro p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 18px;
-}
-
-.program-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 35px;
-}
-
-.program-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  border-top: 5px solid var(--bmg-green);
-}
-
-.program-card h3 {
-  color: var(--bmg-green);
-  margin-bottom: 12px;
-}
-
-footer {
-  background: var(--bmg-dark-green);
-  color: var(--white);
-  text-align: center;
-  padding: 30px 8%;
-}
-
-footer p:first-child {
-  color: var(--bmg-orange);
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-menu {
-    text-align: center;
-  }
-
-  .nav-menu a {
-    display: inline-block;
-    margin: 8px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero h2 {
-    font-size: 22px;
-  }
-
-  .program-grid {
-    grid-template-columns: 1fr;
-  }
-}
-const images = document.querySelectorAll(
-".gallery-album-card img, .featured-gallery-grid img"
-);
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".lightbox-close");
-
-images.forEach(img => {
-
-    img.addEventListener("click", () => {
-
+    galleryImages.forEach(function (img) {
+      img.addEventListener("click", function () {
         lightbox.style.display = "flex";
         lightboxImg.src = img.src;
-
+        lightboxImg.alt = img.alt || "Gallery image preview";
+      });
     });
 
+    closeBtn.addEventListener("click", function () {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+
+  }
+
 });
-
-closeBtn.addEventListener("click", () => {
-
-    lightbox.style.display = "none";
-
-});
-
-lightbox.addEventListener("click", (e)=>{
-
-    if(e.target===lightbox){
-
-        lightbox.style.display="none";
-
-    }
-
-});
-
