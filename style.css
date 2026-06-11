@@ -1500,3 +1500,22 @@ footer p:first-child {
         opacity:1;
     }
 }
+
+.nav-menu a.active {
+  background: #00A651;
+  color: #ffffff !important;
+  padding: 12px 28px;
+  border-radius: 40px;
+}
+
+.staff-btn {
+  background: #F4A024;
+  color: #ffffff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.staff-btn:hover {
+  background: #00A651;
+}
