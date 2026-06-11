@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/sitemap.xml
