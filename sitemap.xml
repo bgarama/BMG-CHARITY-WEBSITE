@@ -1,1 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/</loc>
+<priority>1.0</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/who-we-are.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/projects.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/gallery.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/news.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/partners.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://garama33-crypto.github.io/BMG-CHARITY-WEBSITE/pages/contact.html</loc>
+<priority>0.8</priority>
+</url>
+
+</urlset>
