@@ -1519,3 +1519,109 @@ footer p:first-child {
 .staff-btn:hover {
   background: #00A651;
 }
+
+/* =========================
+   STAFF LOGIN & FEEDBACK
+========================= */
+
+.staff-login-section {
+  padding: 90px 8%;
+  background: #f4fbf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff-login-card {
+  max-width: 650px;
+  width: 100%;
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  border-top: 7px solid #00a651;
+}
+
+.staff-login-card h1 {
+  color: #006b3f;
+  font-size: 2.7rem;
+  margin-bottom: 18px;
+}
+
+.staff-login-card p {
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 28px;
+}
+
+.staff-login-form,
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.staff-login-form input,
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid #cccccc;
+  border-radius: 14px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.staff-login-form button,
+.feedback-form button {
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.feedback-section {
+  padding: 80px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.feedback-section h2 {
+  color: #006b3f;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feedback-section p {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.feedback-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-note {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+  .staff-login-card {
+    padding: 35px 24px;
+  }
+
+  .staff-login-card h1,
+  .feedback-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .staff-login-form button,
+  .feedback-form button {
+    width: 100%;
+  }
+}
