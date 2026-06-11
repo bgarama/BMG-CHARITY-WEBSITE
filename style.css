@@ -1390,8 +1390,8 @@ footer p:first-child {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
 .featured-gallery-grid img {
