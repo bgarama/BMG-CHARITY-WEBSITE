@@ -1625,3 +1625,88 @@ footer p:first-child {
     width: 100%;
   }
 }
+
+/* =========================
+   STAFF LOGIN PAGE
+========================= */
+
+.staff-login-section {
+  padding: 90px 8%;
+  background: #f4fbf7;
+  text-align: center;
+}
+
+.staff-login-section h1 {
+  color: #006b3f;
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+.staff-login-section p {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.staff-login-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.staff-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 22px;
+  text-decoration: none;
+  border-top: 6px solid #00a651;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-6px);
+}
+
+.staff-card h2 {
+  color: #006b3f;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+
+.staff-card p {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.staff-login-btn {
+  background: #f4a024;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 30px;
+}
+
+.staff-login-btn.active {
+  background: #00a651;
+}
+
+@media (max-width: 900px) {
+  .staff-login-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-login-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-login-section h1 {
+    font-size: 2.4rem;
+  }
+}
