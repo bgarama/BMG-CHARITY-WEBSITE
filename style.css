@@ -1490,3 +1490,201 @@ footer p:first-child {
     height: 210px;
   }
 }
+
+/* =========================================================
+   MOBILE OVERFLOW FIX - BAHA MADZO GADZE FOR CHARITY
+   Fixes broken mobile layout, wide cards, images and sections
+========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header mobile safety */
+.site-header,
+.header,
+.navbar,
+.nav-menu {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix all main sections */
+main,
+section,
+.programs-hero,
+.about-hero,
+.gallery-hero,
+.partners-hero,
+.staff-hero,
+.programs-intro,
+.programs-page-section,
+.bmg-leadership,
+.gallery-section,
+.gallery-preview-section,
+.news-section,
+.partnership-cta,
+.gallery-cta,
+.footer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix cards and grids */
+.programs-page-grid,
+.bmg-team-grid,
+.gallery-album-grid,
+.featured-gallery-grid,
+.partners-grid,
+.impact-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fix leadership cards */
+.bmg-team-card,
+.programs-page-card,
+.gallery-album-card,
+.partner-card,
+.impact-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Fix leadership images */
+.bmg-team-card img,
+.gallery-album-card img,
+.partner-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Staff login page restore */
+.staff-portal,
+.staff-section,
+.staff-login-section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.staff-portal h1,
+.staff-section h1,
+.staff-login-section h1 {
+  color: #00A651;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.staff-portal a,
+.staff-section a,
+.staff-login-section a {
+  color: #00A651;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.staff-portal a:hover,
+.staff-section a:hover,
+.staff-login-section a:hover {
+  color: #F4A024;
+}
+
+/* Mobile-specific hard fix */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .programs-hero,
+  .about-hero,
+  .gallery-hero,
+  .partners-hero,
+  .staff-hero {
+    padding: 70px 20px 50px;
+    text-align: center;
+  }
+
+  .programs-hero h1,
+  .about-hero h1,
+  .gallery-hero h1,
+  .partners-hero h1,
+  .staff-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #00A651;
+  }
+
+  .programs-hero p,
+  .about-hero p,
+  .gallery-hero p,
+  .partners-hero p,
+  .staff-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .programs-page-grid,
+  .bmg-team-grid,
+  .gallery-album-grid,
+  .featured-gallery-grid,
+  .partners-grid,
+  .impact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bmg-team-card,
+  .programs-page-card,
+  .gallery-album-card,
+  .partner-card,
+  .impact-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .bmg-team-card img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .partners-page,
+  .partners-section {
+    padding: 60px 20px;
+  }
+
+  .partners-page h1,
+  .partners-section h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .site-footer,
+  footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 45px 20px;
+  }
+}
