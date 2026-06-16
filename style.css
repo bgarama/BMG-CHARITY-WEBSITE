@@ -1179,737 +1179,48 @@ footer p:first-child {
   color: var(--white);
 }
 
-/* =========================================================
-   RESTORED PAGE-SPECIFIC STYLES
-   BAHA MADZO GADZE FOR CHARITY
-   Brand colors: Green #00A651 | Orange #F4A024
-========================================================= */
+/* ===== FIX MISSING LEADERSHIP + MOBILE CONSISTENCY ===== */
 
-/* ---------- Shared Page Hero Titles ---------- */
-
-.programs-hero,
-.about-hero,
-.gallery-hero,
-.news-hero {
-  padding: 90px 20px 60px;
-  background: linear-gradient(135deg, rgba(0, 166, 81, 0.12), rgba(244, 160, 36, 0.12));
-  text-align: center;
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.programs-hero-content,
-.about-hero-content {
-  max-width: 900px;
-  margin: 0 auto;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.programs-hero h1,
-.about-hero-content h1,
-.gallery-section h1,
-.news-section h1 {
-  color: #00A651;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 800;
-  margin-bottom: 16px;
+.logo {
+  color: var(--bmg-dark-green);
 }
 
-.programs-hero p,
-.about-hero-content p,
-.programs-intro p {
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.7;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
-/* ---------- Projects / Programs Page ---------- */
-
-.programs-intro,
-.programs-page-section {
-  padding: 60px 20px;
+.nav-menu a {
+  margin: 0;
 }
-
-.programs-intro {
-  max-width: 950px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.programs-page-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.programs-page-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-  border-top: 5px solid #00A651;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.programs-page-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
-}
-
-.programs-page-card h3 {
-  color: #00A651;
-  margin-bottom: 12px;
-}
-
-.programs-page-card p {
-  color: #444;
-  line-height: 1.7;
-}
-
-.partnership-cta,
-.gallery-cta {
-  padding: 60px 20px;
-  background: #00A651;
-  color: #ffffff;
-  text-align: center;
-}
-
-.partnership-cta h2,
-.gallery-cta h2 {
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.partnership-cta .btn,
-.gallery-cta .btn {
-  background: #F4A024;
-  color: #ffffff;
-}
-
-/* ---------- Who We Are / Leadership Page ---------- */
 
 .bmg-leadership {
-  padding: 70px 20px;
-  background: #f8fdf9;
+  padding: 80px 8%;
+  background: #f4fbf7;
+  text-align: center;
 }
 
 .bmg-section-title {
-  color: #00A651;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.bmg-section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #F4A024;
-  margin: 14px auto 0;
-  border-radius: 10px;
-}
-
-.bmg-section-text {
-  max-width: 900px;
-  margin: 0 auto 40px;
-  text-align: center;
-  color: #444;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.bmg-team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 26px;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.bmg-team-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-  border-bottom: 5px solid #F4A024;
-}
-
-.bmg-team-card h3 {
-  color: #00A651;
-  margin-bottom: 8px;
-}
-
-.bmg-team-card p {
-  color: #555;
-  line-height: 1.6;
-}
-
-/* ---------- Gallery Page ---------- */
-
-.gallery-section,
-.gallery-preview-section {
-  padding: 70px 20px;
-}
-
-.gallery-section {
-  background: #ffffff;
-}
-
-.gallery-preview-section {
-  background: #f8fdf9;
-}
-
-.gallery-album-grid,
-.featured-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.gallery-album-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-}
-
-.gallery-album-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-album-content {
-  padding: 22px;
-}
-
-.gallery-album-content h3 {
-  color: #00A651;
-  margin-bottom: 10px;
-}
-
-.gallery-album-content p {
-  color: #444;
-  line-height: 1.6;
-}
-
-.gallery-album-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 166, 81, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.gallery-album-card:hover .gallery-album-overlay {
-  opacity: 1;
-}
-
-.overlay-text {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-/* ---------- News Page Safety Styles ---------- */
-
-.news-section {
-  padding: 70px 20px;
-}
-
-.news-section h1,
-.news-section h2,
-.news-section h3 {
-  color: #00A651;
-}
-
-.news-section .date,
-.news-section .tag,
-.news-section strong {
-  color: #F4A024;
-}
-
-/* ---------- Lightbox Restore ---------- */
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.88);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 20px;
-}
-
-.lightbox.active {
-  display: flex;
-}
-
-.lightbox img {
-  max-width: 95%;
-  max-height: 90vh;
-  border-radius: 12px;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  color: #ffffff;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* ---------- Mobile Adjustments ---------- */
-
-@media (max-width: 768px) {
-  .programs-hero,
-  .about-hero,
-  .gallery-hero,
-  .news-hero {
-    padding: 70px 18px 45px;
-  }
-
-  .programs-page-card,
-  .bmg-team-card,
-  .gallery-album-card {
-    border-radius: 14px;
-  }
-
-  .gallery-album-card img {
-    height: 210px;
-  }
-}
-
-/* =========================================================
-   MOBILE OVERFLOW FIX - BAHA MADZO GADZE FOR CHARITY
-   Fixes broken mobile layout, wide cards, images and sections
-========================================================= */
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Header mobile safety */
-.site-header,
-.header,
-.navbar,
-.nav-menu {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Fix all main sections */
-main,
-section,
-.programs-hero,
-.about-hero,
-.gallery-hero,
-.partners-hero,
-.staff-hero,
-.programs-intro,
-.programs-page-section,
-.bmg-leadership,
-.gallery-section,
-.gallery-preview-section,
-.news-section,
-.partnership-cta,
-.gallery-cta,
-.footer {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Fix cards and grids */
-.programs-page-grid,
-.bmg-team-grid,
-.gallery-album-grid,
-.featured-gallery-grid,
-.partners-grid,
-.impact-grid {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Fix leadership cards */
-.bmg-team-card,
-.programs-page-card,
-.gallery-album-card,
-.partner-card,
-.impact-card {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* Fix leadership images */
-.bmg-team-card img,
-.gallery-album-card img,
-.partner-card img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Staff login page restore */
-.staff-portal,
-.staff-section,
-.staff-login-section {
-  padding: 70px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.staff-portal h1,
-.staff-section h1,
-.staff-login-section h1 {
-  color: #00A651;
-  font-size: clamp(2rem, 6vw, 3rem);
-}
-
-.staff-portal a,
-.staff-section a,
-.staff-login-section a {
-  color: #00A651;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.staff-portal a:hover,
-.staff-section a:hover,
-.staff-login-section a:hover {
-  color: #F4A024;
-}
-
-/* Mobile-specific hard fix */
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .programs-hero,
-  .about-hero,
-  .gallery-hero,
-  .partners-hero,
-  .staff-hero {
-    padding: 70px 20px 50px;
-    text-align: center;
-  }
-
-  .programs-hero h1,
-  .about-hero h1,
-  .gallery-hero h1,
-  .partners-hero h1,
-  .staff-hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-    color: #00A651;
-  }
-
-  .programs-hero p,
-  .about-hero p,
-  .gallery-hero p,
-  .partners-hero p,
-  .staff-hero p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .programs-page-grid,
-  .bmg-team-grid,
-  .gallery-album-grid,
-  .featured-gallery-grid,
-  .partners-grid,
-  .impact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .bmg-team-card,
-  .programs-page-card,
-  .gallery-album-card,
-  .partner-card,
-  .impact-card {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .bmg-team-card img {
-    width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-    object-position: top center;
-  }
-
-  .partners-page,
-  .partners-section {
-    padding: 60px 20px;
-  }
-
-  .partners-page h1,
-  .partners-section h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-
-  .site-footer,
-  footer {
-    width: 100%;
-    max-width: 100%;
-    padding: 45px 20px;
-  }
-}
-
-/* =========================================================
-   FINAL RESPONSIVE FIX - ABOUT / PROGRAMS / GALLERY / STAFF
-   BAHA MADZO GADZE FOR CHARITY
-========================================================= */
-
-:root {
-  --bmg-green: #00A651;
-  --bmg-orange: #F4A024;
-  --bmg-dark: #1f2933;
-  --bmg-light: #f7fdf9;
-}
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Global containers */
-.container,
-main,
-section {
-  width: 100%;
-  max-width: 100%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* ---------- HERO SECTIONS ---------- */
-
-.about-hero,
-.programs-hero,
-.gallery-hero,
-.partners-hero,
-.staff-hero {
-  width: 100%;
-  padding: 90px 20px 70px;
-  text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 166, 81, 0.12),
-    rgba(244, 160, 36, 0.14)
-  );
-  overflow: hidden;
-}
-
-.about-hero-content,
-.programs-hero-content {
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.about-hero h1,
-.programs-hero h1,
-.gallery-hero h1,
-.partners-hero h1,
-.staff-hero h1 {
   color: var(--bmg-green);
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 18px;
-}
-
-.about-hero h2,
-.programs-hero h2 {
-  color: var(--bmg-orange);
-  font-size: clamp(1.2rem, 4vw, 2rem);
-  font-weight: 800;
-  margin-bottom: 18px;
-}
-
-.about-hero p,
-.programs-hero p,
-.gallery-hero p,
-.partners-hero p,
-.staff-hero p {
-  color: var(--bmg-dark);
-  font-size: clamp(1rem, 3vw, 1.3rem);
-  line-height: 1.7;
-  margin: 0 auto;
-  max-width: 850px;
-}
-
-.about-hero span {
-  display: block;
-  color: #ffffff;
-  font-size: clamp(1.1rem, 4vw, 1.8rem);
-  font-weight: 800;
-  margin-top: 16px;
-}
-
-/* ---------- ABOUT PAGE CONTENT ---------- */
-
-.about-story,
-.values-section,
-.what-we-do,
-.about-impact {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.about-story {
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.about-story h2,
-.values-section h2,
-.what-we-do h2,
-.about-impact h2 {
-  color: var(--bmg-dark);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  margin-bottom: 24px;
-}
-
-.about-story p {
-  color: var(--bmg-dark);
-  font-size: 1.08rem;
-  line-height: 1.9;
-  margin-bottom: 18px;
-}
-
-.mission-vision {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 70px 20px;
-}
-
-.mv-card,
-.value-card,
-.work-card,
-.impact-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-  border-top: 5px solid var(--bmg-green);
-  overflow: hidden;
-}
-
-.mv-card h2,
-.value-card h3,
-.work-card h3 {
-  color: var(--bmg-green);
   margin-bottom: 12px;
-}
-
-.mv-card p,
-.work-card p,
-.impact-card p {
-  color: #444;
-  line-height: 1.7;
-}
-
-.values-grid,
-.work-grid,
-.impact-grid,
-.bmg-team-grid,
-.programs-page-grid,
-.gallery-album-grid,
-.featured-gallery-grid,
-.partners-grid {
-  display: grid;
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.values-grid,
-.work-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.impact-grid {
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-}
-
-.impact-card h3 {
-  color: var(--bmg-green);
-  font-size: 2.3rem;
-  font-weight: 800;
-}
-
-/* ---------- LEADERSHIP SECTION ---------- */
-
-.bmg-leadership {
-  width: 100%;
-  padding: 70px 0;
-  background: var(--bmg-light);
-  overflow: hidden;
-}
-
-.bmg-section-title {
-  color: var(--bmg-green);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 16px;
 }
 
 .bmg-section-title::after {
@@ -1925,196 +1236,137 @@ section {
 .bmg-section-text {
   max-width: 850px;
   margin: 0 auto 40px;
-  text-align: center;
   color: #444;
-  font-size: 1.05rem;
   line-height: 1.8;
 }
 
 .bmg-team-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
 }
 
 .bmg-team-card {
-  width: 100%;
-  max-width: 100%;
   background: #ffffff;
   border-radius: 18px;
-  padding: 0 0 24px;
-  text-align: center;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-  border-bottom: 5px solid var(--bmg-orange);
   overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  border-bottom: 5px solid var(--bmg-orange);
+  text-align: center;
 }
 
 .bmg-team-card img {
   width: 100%;
-  height: 340px;
+  height: 330px;
   object-fit: cover;
   object-position: top center;
 }
 
 .bmg-team-card h3 {
   color: var(--bmg-green);
-  margin: 18px 12px 8px;
+  margin: 18px 12px 6px;
 }
 
 .bmg-team-card p {
+  padding: 0 16px 22px;
   color: #555;
-  line-height: 1.6;
-  padding: 0 16px;
-}
-
-/* ---------- CTA / FOOTER SAFETY ---------- */
-
-.about-cta {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.about-cta h2 {
-  color: var(--bmg-orange);
-  font-size: clamp(1.6rem, 5vw, 2.6rem);
-  line-height: 1.3;
-  margin-bottom: 18px;
-}
-
-.about-cta p {
-  color: var(--bmg-dark);
-  margin-bottom: 24px;
 }
 
 .site-footer {
   width: 100%;
-  max-width: 100%;
-  background: #006b3f;
-  color: #ffffff;
+  background: var(--bmg-dark-green);
+  color: var(--white);
   text-align: center;
-  padding: 55px 20px;
+  padding: 45px 8%;
+  overflow: hidden;
 }
 
-.site-footer h3,
 .footer-motto {
   color: var(--bmg-orange);
+  font-weight: 800;
+  margin: 16px 0;
 }
 
-/* ---------- STAFF LOGIN PAGE ---------- */
+/* Projects page aliases */
+.programs-hero {
+  min-height: 65vh;
+  background: linear-gradient(rgba(0,80,45,.75), rgba(0,80,45,.75)),
+    url("assets/images/hero-cleanup.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 8%;
+  color: #fff;
+}
 
+.programs-page-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.programs-page-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 14px 35px rgba(0,0,0,.08);
+  border-top: 6px solid var(--bmg-green);
+}
+
+.programs-page-card h3 {
+  color: var(--bmg-green);
+}
+
+/* Staff portal fallback */
+.staff-page,
 .staff-portal,
 .staff-section,
-.staff-login-section,
-.staff-page {
-  max-width: 1000px;
+.staff-login-section {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 70px 20px;
+  padding: 80px 8%;
 }
 
-.staff-portal h1,
-.staff-section h1,
-.staff-login-section h1,
-.staff-page h1 {
+.staff-page h1,
+.staff-portal h1 {
   color: var(--bmg-green);
-  font-size: clamp(2rem, 6vw, 3rem);
-  line-height: 1.2;
 }
 
-.staff-portal a,
-.staff-section a,
-.staff-login-section a,
-.staff-page a {
+.staff-page a,
+.staff-portal a {
   color: var(--bmg-green);
   font-weight: 700;
   text-decoration: none;
 }
 
-.staff-portal a:hover,
-.staff-section a:hover,
-.staff-login-section a:hover,
-.staff-page a:hover {
-  color: var(--bmg-orange);
-}
+/* Mobile */
+@media (max-width: 900px) {
+  .bmg-team-grid,
+  .programs-page-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-/* ---------- MOBILE HARD FIX ---------- */
-
-@media (max-width: 768px) {
   .site-header {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    flex-direction: column;
+    padding: 18px 6%;
   }
 
   .nav-menu {
-    width: 100%;
-    max-width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .mission-vision,
-  .values-grid,
-  .work-grid,
-  .impact-grid,
-  .bmg-team-grid,
-  .programs-page-grid,
-  .gallery-album-grid,
-  .featured-gallery-grid,
-  .partners-grid {
-    grid-template-columns: 1fr !important;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .about-story,
-  .values-section,
-  .what-we-do,
-  .about-impact,
-  .about-cta {
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 10px;
   }
 
   .bmg-team-card img {
     height: 360px;
   }
-
-  .about-hero span {
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  }
 }
 
-@media (max-width: 480px) {
-  .about-hero,
-  .programs-hero,
-  .gallery-hero,
-  .partners-hero,
-  .staff-hero {
-    padding: 70px 18px 55px;
-  }
-
-  .bmg-team-grid,
-  .values-grid,
-  .work-grid,
-  .impact-grid,
-  .programs-page-grid,
-  .gallery-album-grid,
-  .featured-gallery-grid,
-  .partners-grid {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .bmg-team-card img {
-    height: 330px;
-  }
-
-  .site-footer {
-    padding: 45px 18px;
-  }
-}
