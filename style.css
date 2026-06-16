@@ -1178,3 +1178,315 @@ footer p:first-child {
   background: var(--bmg-dark-green);
   color: var(--white);
 }
+
+/* =========================================================
+   RESTORED PAGE-SPECIFIC STYLES
+   BAHA MADZO GADZE FOR CHARITY
+   Brand colors: Green #00A651 | Orange #F4A024
+========================================================= */
+
+/* ---------- Shared Page Hero Titles ---------- */
+
+.programs-hero,
+.about-hero,
+.gallery-hero,
+.news-hero {
+  padding: 90px 20px 60px;
+  background: linear-gradient(135deg, rgba(0, 166, 81, 0.12), rgba(244, 160, 36, 0.12));
+  text-align: center;
+}
+
+.programs-hero-content,
+.about-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.programs-hero h1,
+.about-hero-content h1,
+.gallery-section h1,
+.news-section h1 {
+  color: #00A651;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.programs-hero p,
+.about-hero-content p,
+.programs-intro p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ---------- Projects / Programs Page ---------- */
+
+.programs-intro,
+.programs-page-section {
+  padding: 60px 20px;
+}
+
+.programs-intro {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.programs-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.programs-page-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #00A651;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programs-page-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+.programs-page-card h3 {
+  color: #00A651;
+  margin-bottom: 12px;
+}
+
+.programs-page-card p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.partnership-cta,
+.gallery-cta {
+  padding: 60px 20px;
+  background: #00A651;
+  color: #ffffff;
+  text-align: center;
+}
+
+.partnership-cta h2,
+.gallery-cta h2 {
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.partnership-cta .btn,
+.gallery-cta .btn {
+  background: #F4A024;
+  color: #ffffff;
+}
+
+/* ---------- Who We Are / Leadership Page ---------- */
+
+.bmg-leadership {
+  padding: 70px 20px;
+  background: #f8fdf9;
+}
+
+.bmg-section-title {
+  color: #00A651;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.bmg-section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #F4A024;
+  margin: 14px auto 0;
+  border-radius: 10px;
+}
+
+.bmg-section-text {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.bmg-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.bmg-team-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  border-bottom: 5px solid #F4A024;
+}
+
+.bmg-team-card h3 {
+  color: #00A651;
+  margin-bottom: 8px;
+}
+
+.bmg-team-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- Gallery Page ---------- */
+
+.gallery-section,
+.gallery-preview-section {
+  padding: 70px 20px;
+}
+
+.gallery-section {
+  background: #ffffff;
+}
+
+.gallery-preview-section {
+  background: #f8fdf9;
+}
+
+.gallery-album-grid,
+.featured-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-album-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-album-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-album-content {
+  padding: 22px;
+}
+
+.gallery-album-content h3 {
+  color: #00A651;
+  margin-bottom: 10px;
+}
+
+.gallery-album-content p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.gallery-album-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 166, 81, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-album-card:hover .gallery-album-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ---------- News Page Safety Styles ---------- */
+
+.news-section {
+  padding: 70px 20px;
+}
+
+.news-section h1,
+.news-section h2,
+.news-section h3 {
+  color: #00A651;
+}
+
+.news-section .date,
+.news-section .tag,
+.news-section strong {
+  color: #F4A024;
+}
+
+/* ---------- Lightbox Restore ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ---------- Mobile Adjustments ---------- */
+
+@media (max-width: 768px) {
+  .programs-hero,
+  .about-hero,
+  .gallery-hero,
+  .news-hero {
+    padding: 70px 18px 45px;
+  }
+
+  .programs-page-card,
+  .bmg-team-card,
+  .gallery-album-card {
+    border-radius: 14px;
+  }
+
+  .gallery-album-card img {
+    height: 210px;
+  }
+}
