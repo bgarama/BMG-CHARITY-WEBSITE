@@ -1869,3 +1869,47 @@ section p {
     }
 
 }
+
+/* =====================================================
+   ACTIVE NAVIGATION STATE FIX
+   Orange = current page only
+===================================================== */
+
+.nav-menu a {
+  color: var(--text-dark);
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.25s ease;
+}
+
+.nav-menu a:hover {
+  background: rgba(244, 160, 36, 0.18);
+  color: var(--text-dark);
+}
+
+/* Current page */
+.nav-menu a.active {
+  background: var(--bmg-orange);
+  color: var(--text-dark);
+}
+
+/* Staff button normal state */
+.nav-menu a.staff-btn {
+  background: transparent;
+  color: var(--text-dark);
+}
+
+/* Staff button hover */
+.nav-menu a.staff-btn:hover {
+  background: rgba(244, 160, 36, 0.18);
+  color: var(--text-dark);
+}
+
+/* Staff button active only on staff page */
+.nav-menu a.staff-btn.active {
+  background: var(--bmg-orange);
+  color: var(--text-dark);
+}
