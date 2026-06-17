@@ -1570,3 +1570,112 @@ p {
   background: var(--bmg-green);
   color: #ffffff;
 }
+
+/* =====================================================
+   BMG GLOBAL CONTENT ALIGNMENT SYSTEM
+===================================================== */
+
+.section-container,
+.programs-intro,
+.projects-grid,
+.contact-grid,
+.contact-form,
+.map-box,
+.news-grid,
+.partners-logo-grid,
+.featured-gallery-grid,
+.article-content,
+.gallery-grid,
+.impact-grid,
+.values-grid,
+.work-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Standard page spacing */
+
+.projects-page-section,
+.programs-page-section,
+.contact-section,
+.contact-form-section,
+.map-section,
+.values-section,
+.what-we-do,
+.about-story,
+.about-impact,
+.news-section,
+.article-gallery,
+.gallery-section {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Center all section headings */
+
+section h1,
+section h2 {
+    text-align: center;
+}
+
+/* Paragraph widths */
+
+section p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact page */
+
+.contact-form-section {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 800px;
+}
+
+/* Partners page */
+
+.partners-logo-grid {
+    justify-content: center;
+}
+
+.partner-logo-card {
+    text-align: center;
+}
+
+/* Projects page */
+
+.projects-grid {
+    justify-content: center;
+}
+
+.project-card-content {
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .projects-page-section,
+    .programs-page-section,
+    .contact-section,
+    .contact-form-section,
+    .map-section,
+    .values-section,
+    .what-we-do,
+    .about-story,
+    .about-impact,
+    .news-section,
+    .article-gallery,
+    .gallery-section {
+
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+}
