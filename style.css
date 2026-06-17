@@ -1915,47 +1915,34 @@ section p {
 }
 
 /* =====================================================
-   BMG TYPOGRAPHY CONSISTENCY FIX
-   Titles | Paragraphs | Section spacing
+   BMG LIGHT STANDARD FIX
+   Match News page visual style across all pages
 ===================================================== */
 
-/* Global page background */
 body {
-  background: #000000;
-  color: #ffffff;
+  background: var(--light-bg);
+  color: var(--text-dark);
 }
 
-/* Main section wrapper spacing */
-main section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+/* Light content sections */
+main section:not(.hero):not(.about-hero):not(.projects-hero):not(.programs-hero):not(.gallery-hero):not(.staff-login-hero) {
+  background: var(--light-bg);
+  color: var(--text-dark);
 }
 
-/* Standard section titles */
+/* Titles */
 main section h1,
 main section h2 {
-  color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--bmg-dark-green);
   font-weight: 900;
+  text-align: center;
   line-height: 1.2;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
-/* Standard subheadings */
-main section h3 {
-  color: var(--bmg-green);
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-/* Standard paragraphs */
+/* Paragraphs */
 main section p {
-  color: #ffffff;
-  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  color: var(--text-dark);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.8;
   max-width: 850px;
   margin-left: auto;
@@ -1963,44 +1950,33 @@ main section p {
   text-align: center;
 }
 
-/* Orange highlight text */
+/* Hero text remains white */
+.hero h1,
+.hero p,
+.about-hero h1,
+.about-hero p,
+.about-hero span,
+.projects-hero h1,
+.projects-hero p,
+.programs-hero h1,
+.programs-hero p,
+.gallery-hero h1,
+.gallery-hero p,
+.staff-login-hero h1,
+.staff-login-hero p {
+  color: #ffffff;
+}
+
+/* Hero orange subtitle */
 .hero h2,
 .about-hero h2,
 .projects-hero h2,
 .programs-hero h2,
-.gallery-hero h2,
-.partners-hero h2,
-.footer-motto {
+.gallery-hero h2 {
   color: var(--bmg-orange);
 }
 
-/* Hero paragraphs always white */
-.hero p,
-.about-hero p,
-.about-hero span,
-.projects-hero p,
-.programs-hero p,
-.gallery-hero p,
-.partners-hero p,
-.contact-hero p {
-  color: #ffffff;
-  font-weight: 700;
-}
-
-/* Page intro sections */
-.programs-intro,
-.about-story,
-.contact-section,
-.partners-section,
-.gallery-section,
-.news-section {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* Cards keep readable dark text */
+/* Cards */
 .program-card,
 .programs-page-card,
 .project-card,
@@ -2011,25 +1987,30 @@ main section p {
 .work-card,
 .impact-card,
 .bmg-team-card,
-.contact-card {
+.contact-card,
+.news-card {
+  background: #ffffff;
   color: var(--text-dark);
+  border-top: 7px solid var(--bmg-green);
 }
 
+/* Card text */
 .program-card p,
 .programs-page-card p,
 .project-card p,
-.gallery-album-content p,
+.gallery-album-card p,
 .partner-logo-card p,
 .mv-card p,
 .value-card p,
 .work-card p,
 .impact-card p,
 .bmg-team-card p,
-.contact-card p {
-  color: #333333;
+.contact-card p,
+.news-card p {
+  color: var(--text-dark);
 }
 
-/* Card titles */
+/* Card headings */
 .program-card h3,
 .programs-page-card h3,
 .project-card h2,
@@ -2040,62 +2021,55 @@ main section p {
 .work-card h3,
 .impact-card h3,
 .bmg-team-card h3,
-.contact-card h2 {
-  color: var(--bmg-green);
+.contact-card h2,
+.news-card h2 {
+  color: var(--bmg-dark-green);
 }
 
-/* Staff portal card text correction */
-.staff-page a,
-.staff-portal a,
-.staff-section a,
-.staff-login-section a {
+/* Button standard */
+.btn,
+.primary,
+.staff-btn,
+.whatsapp-btn,
+.contact-form button,
+.gallery-album-card .btn,
+.gallery-album-content .btn,
+.project-card .btn,
+.programs-page-card .btn {
+  background: var(--bmg-orange);
   color: var(--text-dark);
+  border: none;
+  border-radius: 35px;
+  padding: 14px 28px;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
-.staff-page a h2,
-.staff-page a h3,
-.staff-portal a h2,
-.staff-portal a h3,
-.staff-section a h2,
-.staff-section a h3,
-.staff-login-section a h2,
-.staff-login-section a h3 {
-  color: var(--text-dark);
-}
-
-.staff-page a p,
-.staff-portal a p,
-.staff-section a p,
-.staff-login-section a p {
+.btn:hover,
+.primary:hover,
+.staff-btn:hover,
+.whatsapp-btn:hover,
+.contact-form button:hover {
+  background: var(--bmg-green);
   color: #ffffff;
-  font-weight: 700;
 }
 
-/* Footer typography */
+/* Footer remains green */
+.site-footer,
+footer {
+  background: var(--bmg-dark-green);
+  color: #ffffff;
+}
+
 .site-footer h3,
-footer h3 {
+footer h3,
+.footer-motto {
   color: var(--bmg-orange);
 }
 
 .site-footer p,
 footer p {
   color: #ffffff;
-  font-size: 1rem;
-}
-
-/* Mobile typography */
-@media (max-width: 768px) {
-  main section {
-    padding-top: 55px;
-    padding-bottom: 55px;
-  }
-
-  main section h1,
-  main section h2 {
-    font-size: 2rem;
-  }
-
-  main section p {
-    font-size: 1rem;
-  }
 }
