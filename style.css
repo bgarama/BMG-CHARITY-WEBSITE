@@ -2138,3 +2138,41 @@ footer p {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+
+.latest-news-home,
+.partners-home-section {
+  padding: 80px 8%;
+  text-align: center;
+  background: var(--light-bg);
+}
+
+.latest-news-home h2,
+.partners-home-section h2 {
+  color: var(--bmg-dark-green);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.latest-news-home > p,
+.partners-home-section > p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.latest-news-home .news-grid {
+  margin-bottom: 35px;
+}
+
+.partners-home-section .partners-logo-grid {
+  margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  .latest-news-home,
+  .partners-home-section {
+    padding: 60px 6%;
+  }
+}
