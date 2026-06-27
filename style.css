@@ -2412,3 +2412,28 @@ footer p {
     margin-right: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+    padding: 8px 12px;
+    line-height: 1.2;
+    border-radius: 24px;
+  }
+
+  .nav-menu a.active {
+    background: var(--bmg-orange);
+    color: var(--text-dark);
+  }
+}
