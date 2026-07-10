@@ -2461,7 +2461,7 @@ footer {
   color: #4caf50; /* A nice green accent color, perfect for an environmental CBO */
 }
 footer {
-  background-color: #1a1a1a;
+  background: var(--bmg-dark-green);
   color: #ffffff;
   text-align: center;
   padding: 25px 15px;
