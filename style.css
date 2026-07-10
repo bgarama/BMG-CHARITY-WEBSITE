@@ -667,8 +667,7 @@ footer p:first-child {
 
 .about-hero {
   min-height: 65vh;
-  background:
-    linear-gradient(rgba(0, 80, 45, 0.75), rgba(0, 80, 45, 0.75)),
+  background:background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 80, 40, 0.45)),
     url("assets/images/hero-cleanup.jpeg");
   background-size: cover;
   background-position: center;
@@ -903,8 +902,8 @@ footer p:first-child {
 
 .projects-hero {
   min-height: 65vh;
-  background: linear-gradient(rgba(0, 80, 45, 0.75), rgba(0, 80, 45, 0.75)),
-    url("assets/images/hero-cleanup.jpeg");
+   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 80, 40, 0.45)),
+  url("assets/images/hero-cleanup.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
