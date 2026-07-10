@@ -46,5 +46,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
-
 });
+
+// ==========================================
+// EASY CONFIGURATION FOR NON-TECH USERS
+// Just change the text inside the quotes below!
+// ==========================================
+const webConfig = {
+    designerName: "Your Designer Name",
+    builderName: "Your Builder Name",
+    deploymentPlatform: "GitHub Pages / Netlify / Vercel"
+};
+
+// ==========================================
+// AUTOMATION LOGIC (Do not change below here)
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+    const designerSpan = document.getElementById("site-designer");
+    const builderSpan = document.getElementById("site-builder");
+    const deploymentSpan = document.getElementById("site-deployment");
+
+    if (designerSpan) designerSpan.textContent = webConfig.designerName;
+    if (builderSpan) builderSpan.textContent = webConfig.builderName;
+    if (deploymentSpan) deploymentSpan.textContent = webConfig.deploymentPlatform;
+});
+
+
