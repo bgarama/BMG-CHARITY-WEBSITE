@@ -2437,3 +2437,26 @@ footer p {
     color: var(--text-dark);
   }
 }
+
+footer {
+  background-color: #222; /* Dark professional background */
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.site-credits {
+  font-size: 12px;
+  color: #bbb; /* Slightly lighter text for secondary info */
+}
+
+.site-credits span {
+  font-weight: bold;
+  color: #4caf50; /* A nice green accent color, perfect for an environmental CBO */
+}
