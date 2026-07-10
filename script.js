@@ -71,4 +71,27 @@ document.addEventListener("DOMContentLoaded", function() {
     if (deploymentSpan) deploymentSpan.textContent = webConfig.deploymentPlatform;
 });
 
+// ==========================================
+// EASY CONFIGURATION FOR NON-TECH USERS
+// Just change the text inside the quotes below!
+// ==========================================
+const webConfig = {
+    designerName: "Baraka",
+    approvalTeam: "Baha Madzo Gadze Executive Team",
+    deploymentPlatform: "GitHub Pages" // Change this to Netlify, Vercel, or your host if needed
+};
+
+// ==========================================
+// AUTOMATION LOGIC (Do not change below here)
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+    const designerSpan = document.getElementById("site-designer");
+    const approvalSpan = document.getElementById("site-approval");
+    const deploymentSpan = document.getElementById("site-deployment");
+
+    if (designerSpan) designerSpan.textContent = webConfig.designerName;
+    if (approvalSpan) approvalSpan.textContent = webConfig.approvalTeam;
+    if (deploymentSpan) deploymentSpan.textContent = webConfig.deploymentPlatform;
+});
+
 
