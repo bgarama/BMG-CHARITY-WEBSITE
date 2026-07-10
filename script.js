@@ -94,4 +94,44 @@ document.addEventListener("DOMContentLoaded", function() {
     if (deploymentSpan) deploymentSpan.textContent = webConfig.deploymentPlatform;
 });
 
+// Website Credits
+const webConfig = {
+  PoweredBy: "Baha Digital Innovation Hub",
+ 
+};
+
+document.getElementById("site-engineer").textContent =
+  webConfig.engineerName;
+
+document.getElementById("site-approval").textContent =
+  webConfig.approvalTeam;
+
+document.getElementById("site-powered").textContent =
+  webConfig.poweredBy;
+
+
+// Countdown
+const launchDate = new Date("December 31, 2026 00:00:00");
+
+const countdown = setInterval(() => {
+
+  const now = new Date().getTime();
+  const distance = launchDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+  );
+
+  document.getElementById("countdown").innerHTML =
+    `${days} Days ${hours} Hours`;
+
+  if (distance < 0) {
+    clearInterval(countdown);
+    document.getElementById("countdown").innerHTML =
+      "Launching Soon";
+  }
+
+}, 1000);
 
