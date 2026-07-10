@@ -2439,7 +2439,7 @@ footer p {
 }
 
 footer {
-  bbackground: var(--bmg-dark-green);
+  background: var(--bmg-dark-green);
   color: #fff;
   text-align: center;
   padding: 20px 10px;
