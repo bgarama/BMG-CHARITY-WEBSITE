@@ -74,3 +74,38 @@ document.addEventListener("DOMContentLoaded", function () {
   if (poweredSpan) poweredSpan.textContent = webConfig.poweredBy;
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  const clickableImages = document.querySelectorAll(
+    ".featured-gallery-grid img, .gallery-album-card img, .course-structure-grid img"
+  );
+
+  clickableImages.forEach((img) => {
+    img.style.cursor = "pointer";
+
+    img.addEventListener("click", function () {
+      lightbox.style.display = "flex";
+      lightboxImg.src = this.src;
+      lightboxImg.alt = this.alt;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+    document.body.style.overflow = "auto";
+  });
+
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+      document.body.style.overflow = "auto";
+    }
+  });
+});
