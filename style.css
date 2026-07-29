@@ -2619,3 +2619,17 @@ footer {
     font-size: 1rem;
   }
 }
+
+.course-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-images img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  }
