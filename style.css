@@ -2990,4 +2990,38 @@ body.lightbox-open {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 50px 7% 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    margin: 6px;
+  }
+}
 
