@@ -1,4 +1,3 @@
-
 :root {
   --bmg-green: #00A651;
   --bmg-dark-green: #005B33;
@@ -6,6 +5,12 @@
   --white: #ffffff;
   --light-bg: #f4f8f5;
   --text-dark: #1f2933;
+
+  --light: #f4f8f5;
+  --primary: #00A651;
+  --secondary: #005B33;
+  --dark: #1f2933;
+  --accent: #F4A024;
 }
 
 * {
