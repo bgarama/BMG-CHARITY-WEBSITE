@@ -664,10 +664,9 @@ footer p:first-child {
 }
 
 /* ===== ABOUT PAGE ===== */
-
-.about-hero {
+ .about-hero {
   min-height: 65vh;
-  background:background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 80, 40, 0.45)),
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 80, 40, 0.45)),
     url("assets/images/hero-cleanup.jpeg");
   background-size: cover;
   background-position: center;
@@ -678,6 +677,7 @@ footer p:first-child {
   padding: 80px 8%;
   color: #ffffff;
 }
+
 
 .about-hero h1 {
   font-size: 4rem;
