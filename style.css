@@ -2705,3 +2705,255 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+
+/* ===============================
+   COURSE STRUCTURE PAGE
+=============================== */
+
+.course-structure-section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-structure-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.course-structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.course-figure {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0;
+}
+
+.course-figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.course-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.course-figure figcaption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+}
+
+/* ===============================
+   LIGHTBOX
+=============================== */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+  cursor: grab;
+}
+
+.lightbox-image:active {
+  cursor: grabbing;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next,
+.lightbox-zoom-in,
+.lightbox-zoom-out,
+.lightbox-reset {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover,
+.lightbox-zoom-in:hover,
+.lightbox-zoom-out:hover,
+.lightbox-reset:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.05);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  z-index: 10001;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  z-index: 10001;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10001;
+}
+
+.lightbox-zoom-in,
+.lightbox-zoom-out,
+.lightbox-reset {
+  position: static;
+  width: 48px;
+  height: 48px;
+  font-size: 1.3rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  z-index: 10001;
+  backdrop-filter: blur(6px);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .course-structure-section {
+    padding: 2rem 1rem;
+  }
+
+  .course-structure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-overlay {
+    padding: 1rem;
+  }
+
+  .lightbox-image {
+    max-height: 75vh;
+  }
+
+  .lightbox-close {
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-controls {
+    bottom: 18px;
+    gap: 0.5rem;
+  }
+
+  .lightbox-zoom-in,
+  .lightbox-zoom-out,
+  .lightbox-reset {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .lightbox-counter {
+    top: 14px;
+    left: 14px;
+    font-size: 0.85rem;
+  }
+}
+
