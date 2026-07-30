@@ -3025,3 +3025,10 @@ body.lightbox-open {
   }
 }
 
+.nav-menu a.active {
+  background: var(--bmg-orange);
+  color: var(--text-dark);
+  border-radius: 30px;
+  text-decoration: none;
+}
+
