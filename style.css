@@ -3031,4 +3031,30 @@ body.lightbox-open {
   border-radius: 30px;
   text-decoration: none;
 }
+/* ===== PROJECTS PAGE MOBILE HERO FIX ONLY ===== */
+@media (max-width: 768px) {
+  .projects-hero {
+    min-height: 85vh;
+    padding: 140px 7% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+  }
+
+  .projects-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .projects-hero p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
