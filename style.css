@@ -349,7 +349,7 @@ main section:not(.hero):not(.about-hero):not(.projects-hero):not(.programs-hero)
 
 main section h1,
 main section h2 {
-  color: var(--bmg-dark-green);
+  color: var(--text-dark)
   text-align: center;
   line-height: 1.2;
 }
