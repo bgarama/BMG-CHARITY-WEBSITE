@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
      Easy configuration for non-tech users
   ========================= */
   const webConfig = {
-    designerName: "Baraka",
+    designerName: "Baha Digital Innovation Hub",
     builderName: "Baha Digital Innovation Hub",
     engineerName: "Baha Digital Innovation Hub",
     approvalTeam: "Baha Madzo Gadze Executive Team",
