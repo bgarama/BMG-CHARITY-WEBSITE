@@ -1,54 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  initStandardLightbox();
+  initCourseStructureLightbox();
 
-/* =========================
-   BAHA MADZO GADZE WEBSITE JS
-========================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* =========================
-     GALLERY LIGHTBOX
-  ========================= */
-  const galleryImages = document.querySelectorAll(
-    ".gallery-album-card img, .featured-gallery-grid img, .gallery-grid img"
-  );
-
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".lightbox-close");
-
-  if (galleryImages.length > 0 && lightbox && lightboxImg && closeBtn) {
-    galleryImages.forEach(function (img) {
-      img.addEventListener("click", function () {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || "Gallery image preview";
-      });
-    });
-
-    closeBtn.addEventListener("click", function () {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-    });
-
-    lightbox.addEventListener("click", function (event) {
-      if (event.target === lightbox) {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-      }
-    });
-  }
-
-  /* =========================
-     WEBSITE CREDITS CONFIG
-     Easy configuration for non-tech users
-  ========================= */
   const webConfig = {
     designerName: "Baha Digital Innovation Hub",
     builderName: "Baha Digital Innovation Hub",
@@ -58,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     poweredBy: "Baha Digital Innovation Hub"
   };
 
-  // Safely update footer credits if elements exist
   const designerSpan = document.getElementById("site-designer");
   const builderSpan = document.getElementById("site-builder");
   const engineerSpan = document.getElementById("site-engineer");
@@ -72,49 +24,55 @@ document.addEventListener("DOMContentLoaded", function () {
   if (approvalSpan) approvalSpan.textContent = webConfig.approvalTeam;
   if (deploymentSpan) deploymentSpan.textContent = webConfig.deploymentPlatform;
   if (poweredSpan) poweredSpan.textContent = webConfig.poweredBy;
-
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+function initStandardLightbox() {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".lightbox-close");
 
   const clickableImages = document.querySelectorAll(
-    ".featured-gallery-grid img, .gallery-album-card img, .course-structure-grid img"
+    ".gallery-album-card img, .featured-gallery-grid img, .gallery-grid img"
   );
+
+  if (!lightbox || !lightboxImg || !closeBtn || clickableImages.length === 0) {
+    return;
+  }
 
   clickableImages.forEach((img) => {
     img.style.cursor = "pointer";
 
-    img.addEventListener("click", function () {
+    img.addEventListener("click", () => {
       lightbox.style.display = "flex";
-      lightboxImg.src = this.src;
-      lightboxImg.alt = this.alt;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || "Gallery image preview";
       document.body.style.overflow = "hidden";
     });
   });
 
-  closeBtn.addEventListener("click", function () {
+  function closeLightbox() {
     lightbox.style.display = "none";
     lightboxImg.src = "";
+    lightboxImg.alt = "";
     document.body.style.overflow = "auto";
-  });
+  }
 
-  lightbox.addEventListener("click", function (e) {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-      document.body.style.overflow = "auto";
+  closeBtn.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
     }
   });
-});
 
-/* ===============================
-   COURSE STRUCTURE LIGHTBOX
-=============================== */
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.style.display === "flex") {
+      closeLightbox();
+    }
+  });
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initCourseStructureLightbox() {
   const images = document.querySelectorAll(".lightbox-trigger");
 
   if (!images.length) return;
@@ -197,122 +155,82 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   images.forEach((img, index) => {
-    img.addEventListener("click", function () {
-      openLightbox(index);
-    });
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => openLightbox(index));
   });
 
   closeBtn.addEventListener("click", closeLightbox);
   nextBtn.addEventListener("click", showNext);
   prevBtn.addEventListener("click", showPrev);
 
-  overlay.addEventListener("click", function (e) {
-    if (e.target === overlay) {
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
       closeLightbox();
     }
   });
 
-  zoomInBtn.addEventListener("click", function () {
+  zoomInBtn.addEventListener("click", () => {
     scale = Math.min(scale + 0.25, 4);
     updateTransform();
   });
 
-  zoomOutBtn.addEventListener("click", function () {
+  zoomOutBtn.addEventListener("click", () => {
     scale = Math.max(scale - 0.25, 1);
+
     if (scale === 1) {
       translateX = 0;
       translateY = 0;
     }
+
     updateTransform();
   });
 
   resetBtn.addEventListener("click", resetZoom);
 
-  lightboxImage.addEventListener("wheel", function (e) {
-    e.preventDefault();
-    if (e.deltaY < 0) {
+  lightboxImage.addEventListener("wheel", (event) => {
+    event.preventDefault();
+
+    if (event.deltaY < 0) {
       scale = Math.min(scale + 0.2, 4);
     } else {
       scale = Math.max(scale - 0.2, 1);
+
       if (scale === 1) {
         translateX = 0;
         translateY = 0;
       }
     }
+
     updateTransform();
   });
 
-  lightboxImage.addEventListener("mousedown", function (e) {
+  lightboxImage.addEventListener("mousedown", (event) => {
     if (scale <= 1) return;
+
     isDragging = true;
-    startX = e.clientX - translateX;
-    startY = e.clientY - translateY;
+    startX = event.clientX - translateX;
+    startY = event.clientY - translateY;
     lightboxImage.style.cursor = "grabbing";
   });
 
-  document.addEventListener("mousemove", function (e) {
+  document.addEventListener("mousemove", (event) => {
     if (!isDragging) return;
-    translateX = e.clientX - startX;
-    translateY = e.clientY - startY;
+
+    translateX = event.clientX - startX;
+    translateY = event.clientY - startY;
     updateTransform();
   });
 
-  document.addEventListener("mouseup", function () {
+  document.addEventListener("mouseup", () => {
     isDragging = false;
-    lightboxImage.style.cursor = "grab";
+    lightboxImage.style.cursor = scale > 1 ? "grab" : "default";
   });
 
-  lightboxImage.addEventListener("dblclick", function () {
-    if (scale === 1) {
-      scale = 2;
-    } else {
-      resetZoom();
-      return;
-    }
-    updateTransform();
-  });
-
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener("keydown", (event) => {
     if (!overlay.classList.contains("active")) return;
 
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowRight") showNext();
-    if (e.key === "ArrowLeft") showPrev();
-    if (e.key === "+" || e.key === "=") {
-      scale = Math.min(scale + 0.25, 4);
-      updateTransform();
-    }
-    if (e.key === "-") {
-      scale = Math.max(scale - 0.25, 1);
-      if (scale === 1) {
-        translateX = 0;
-        translateY = 0;
-      }
-      updateTransform();
-    }
-    if (e.key === "0") resetZoom();
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowRight") showNext();
+    if (event.key === "ArrowLeft") showPrev();
   });
-
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  overlay.addEventListener("touchstart", function (e) {
-    if (e.touches.length === 1) {
-      touchStartX = e.changedTouches[0].screenX;
-    }
-  });
-
-  overlay.addEventListener("touchend", function (e) {
-    if (e.changedTouches.length === 1) {
-      touchEndX = e.changedTouches[0].screenX;
-      const swipeDistance = touchEndX - touchStartX;
-
-      if (swipeDistance > 50) {
-        showPrev();
-      } else if (swipeDistance < -50) {
-        showNext();
-      }
-    }
-  });
-});
-
+}
